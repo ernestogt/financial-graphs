@@ -9,7 +9,7 @@ export const fetchNews = async () => {
 
 export const searchSymbol = async (query: string) => {
     try {
-        const response = await fetch(`https://www.alphavantage.co/query?function=SYMBOL_SEARCH&keywords=${query}&apikey=RI7MQIMG2ZBDEFQY}`)
+        const response = await fetch(`https://www.alphavantage.co/query?function=SYMBOL_SEARCH&keywords=${query}&apikey=${API_KEY}`)
 
         if (!response.ok) {
             throw new Error(`Failed to fetch symbol data: ${response.status} ${response.statusText}`);
